@@ -50,7 +50,7 @@ if %errorlevel% neq 0 (
 
 echo --- リンク開始: %TARGET_NAME%.o
 %LINKER% -o "%TARGET_NAME%.bin" -x -n "%TARGET_NAME%.sym" "%TARGET_NAME%.o"
-BIN_FILE=%TARGET_NAME%.bin
+set BIN_FILE=%TARGET_NAME%.bin
 if %errorlevel% neq 0 (
     echo [Fail] rgblinkでエラーが発生しました。
     exit /b 1
